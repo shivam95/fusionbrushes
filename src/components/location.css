@@ -1,0 +1,11 @@
+.address-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-align: center
+}
+.address-container> address {
+    width: 100%;
+    font-size: 30px;
+}
+

@@ -1,0 +1,9 @@
+.main {
+    text-align: center;
+    /* height: 300px; */
+    color: white;
+    background-image: url('./main.jpeg')
+}
+.container-main {
+    padding: 0
+}

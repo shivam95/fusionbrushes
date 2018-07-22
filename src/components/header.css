@@ -1,0 +1,8 @@
+nav {
+    background: #eeeeee;
+    border-bottom: 1px #aaa solid;
+    /* position: static; */
+}
+.navbar-brand {
+    color :#7B0CB9 !important;
+}
