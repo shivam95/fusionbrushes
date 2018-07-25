@@ -4,16 +4,19 @@ import './courses.css'
 
 class Courses extends React.Component {
 
-  renderCourses () {
-    var TOTAL = 10;
+  renderCourses (courses) {
+    var TOTAL = courses.length;
     var courseRows  = [];
     for(var i = 0; i < Math.ceil(TOTAL / 3); i++) {
       courseRows.push(
         <div className="row course-row">
           {
-            [1,2,3].map(
-              () => <CourseItem/>
-            )
+            courses.slice(i*3,i*3+3).map(course =>  (
+              <CourseItem 
+                name={course.node.frontmatter.title} 
+                image={course.node.frontmatter.image}
+              />
+            ))
           }
         </div>
       )
@@ -26,7 +29,7 @@ class Courses extends React.Component {
       <div>
         <h3>Courses</h3>
         <hr />
-        {this.renderCourses()}
+        {this.renderCourses(this.props.courses)}
       </div>
     )
   }
